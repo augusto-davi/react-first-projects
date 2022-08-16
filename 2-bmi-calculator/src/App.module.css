@@ -64,6 +64,14 @@ body {
 
 .rightSide {
   flex: 1;
+  display: flex;
+}
+
+.rightSide .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 [class*='Side'] {
