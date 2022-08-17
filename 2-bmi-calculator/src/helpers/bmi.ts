@@ -17,9 +17,10 @@ export const calculateBMI = (height: number, weight: number) => {
   const bmi = weight / height ** 2;
 
   for (let i in levels) {
-    if (bmi >= levels[i].bmi[0] && bmi) {
-      levels[i].yourBMI = bmi;
-      return levels[i];
+    if (bmi >= levels[i].bmi[0] && bmi < levels[i].bmi[1]) {
+      let levelCopy: Level = { ...levels[i] };
+      levelCopy.yourBMI = parseFloat(bmi.toFixed(2));
+      return levelCopy;
     }
   }
 

@@ -9,7 +9,6 @@ body {
 .headerContainer {
   max-width: 900px;
   margin: 40px auto;
-  background-color: blue;
 }
 
 .container {
@@ -45,6 +44,10 @@ body {
   outline: 0;
 }
 
+.leftSide input:disabled {
+  opacity: 0.5;
+}
+
 .leftSide button {
   background-color: #227c9d;
   color: #fff;
@@ -62,6 +65,10 @@ body {
   opacity: 0.8;
 }
 
+.leftSide button:disabled {
+  opacity: 0.5;
+}
+
 .rightSide {
   flex: 1;
   display: flex;
@@ -74,6 +81,26 @@ body {
   gap: 20px;
 }
 
-[class*='Side'] {
-  border: 1px solid #3a4b5c;
+.rightSide .rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.rightSide .rightArrow {
+  position: absolute;
+  background: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 145px;
+  transition: all ease 0.3s;
+}
+
+.rightArrow:hover {
+  opacity: 0.8;
 }

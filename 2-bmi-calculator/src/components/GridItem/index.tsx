@@ -14,6 +14,9 @@ export const GridItem = ({ item }: Props) => {
         <img src={item.icon === 'up' ? upImage : downImage} alt='' width='30' />
       </div>
       <div className={styles.gridTitle}>{item.title}</div>
+      {item.yourBMI && (
+        <div className={styles.yourBMI}>Seu IMC é de {item.yourBMI} kg/m^2</div>
+      )}
       <div className={styles.gridInfo}>
         <>
           IMC está entre <strong>{item.bmi[0]}</strong> e{' '}
