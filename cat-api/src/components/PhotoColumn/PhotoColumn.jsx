@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PhotoCard from '../PhotoCard/PhotoCard';
 import style from './PhotoColumn.module.css';
 
 function Column({ tag }) {
@@ -7,7 +8,6 @@ function Column({ tag }) {
   const getAPIData = async () => {
     const response = await fetch(`https://cataas.com/api/cats?tags=${tag}`);
     const data = await response.json();
-    console.log(data);
     setCats(data);
   };
 
@@ -17,17 +17,8 @@ function Column({ tag }) {
 
   return (
     <div className={style.Column}>
-      {cats.map(({ id, tags }) => (
-        <figure className={style.imgWrapper} key={id}>
-          <img
-            className={style.imgContent}
-            src={`https://cataas.com/cat/${id}`}
-            alt='A cat'
-          />
-          <figcaption className={style.imgCaption}>
-            Tag: <span className={style.imgTag}>{tags[0]}</span>
-          </figcaption>
-        </figure>
+      {cats.map(({ id, tags }, index) => (
+        <PhotoCard id={id} tags={tags} index={index} />
       ))}
     </div>
   );
