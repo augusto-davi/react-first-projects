@@ -17,10 +17,16 @@ function Column({ tag }) {
 
   return (
     <div className={style.Column}>
-      {cats.map(({ id }) => (
-        <figure key={id}>
-          <img src={`https://cataas.com/cat/${id}`} alt='A cat' />
-          <figcaption>Cat</figcaption>
+      {cats.map(({ id, tags }) => (
+        <figure className={style.imgWrapper} key={id}>
+          <img
+            className={style.imgContent}
+            src={`https://cataas.com/cat/${id}`}
+            alt='A cat'
+          />
+          <figcaption className={style.imgCaption}>
+            Tag: <span className={style.imgTag}>{tags[0]}</span>
+          </figcaption>
         </figure>
       ))}
     </div>
