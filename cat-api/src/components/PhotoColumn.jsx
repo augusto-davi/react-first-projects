@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import style from './Column.module.css';
+import style from './PhotoColumn.module.css';
 
 function Column({ tag }) {
   const [cats, setCats] = useState([]);
