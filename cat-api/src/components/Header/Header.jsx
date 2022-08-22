@@ -7,9 +7,11 @@ function Header() {
     <header className={styles.appHeader}>
       <div className={styles.appTitle}>
         <FaCat className={styles.appIcon} />
-        <h1 className={styles.appName}>Cats</h1>
+        <h1 className={styles.appName}>getcats</h1>
       </div>
-      <div></div>
+      <div>
+        by <a href='https://cataas.com/#/'>CATAAS</a>
+      </div>
     </header>
   );
 }
