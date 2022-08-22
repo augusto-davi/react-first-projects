@@ -10,7 +10,10 @@ function Header() {
         <h1 className={styles.appName}>getcats</h1>
       </div>
       <div>
-        by <a href='https://cataas.com/#/'>CATAAS</a>
+        Photos from:{' '}
+        <a href='https://cataas.com/#/' target='_blank'>
+          CATAAS
+        </a>
       </div>
     </header>
   );
