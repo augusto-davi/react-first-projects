@@ -7,10 +7,10 @@ function App() {
     <div className='App'>
       <Header />
       <div className='columnsWrapper'>
-        <PhotoColumn tag='Friends,happy' />
-        <PhotoColumn tag='cuddle,gamer' />
-        <PhotoColumn tag='playful,christmas,play' />
-        <PhotoColumn tag='closeup,kiss,car' />
+        <PhotoColumn tag='christmas' />
+        <PhotoColumn tag='cuddle' />
+        <PhotoColumn tag='Friends' />
+        <PhotoColumn tag='closeup' />
       </div>
     </div>
   );
